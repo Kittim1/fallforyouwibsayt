@@ -20,7 +20,7 @@ window.SITE = {
   cvFile: "assets/cv.pdf", // put your CV here
 
   images: {
-    hero: "assets/tims.jpg",          // your photo (transparent PNG looks best)
+    hero: "portfolio/assets/tims.jpg",          // your photo (transparent PNG looks best)
     testimonialAvatar: "assets/sarah.jpg"
   },
 
