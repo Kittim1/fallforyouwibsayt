@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kittim — Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="logo"><span class="logo-mark">&lt;/&gt;</span><span id="brand"></span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary btn-sm">Hire Me <span class="arrow">↗</span></a>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="tag" id="badge"></span>
+        <h1>Hi, I'm <span class="accent" id="name"></span><br /><span class="h1-sub" id="headline"></span></h1>
+        <p class="lead" id="intro"></p>
+        <div class="btn-row">
+          <a href="#projects" class="btn btn-primary">View My Work <span class="arrow">↗</span></a>
+          <a href="#" id="cvBtn" class="btn btn-outline" download>Download CV <span>⭳</span></a>
+        </div>
+        <p class="eyebrow small">TECHNOLOGIES I WORK WITH</p>
+        <div class="tech-row" id="techRow"></div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="circle"></div>
+        <div class="dots"></div>
+        <div class="editable hero-img" data-key="hero"><img id="heroImg" alt="Portrait" /></div>
+        <div class="code-card">
+          <div class="code-head"><span>&lt;/&gt; Code</span><i class="live"></i></div>
+<pre id="codeBlock"></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container about-grid">
+      <div>
+        <span class="tag">ABOUT ME</span>
+        <h2 id="aboutTitle"></h2>
+        <p class="muted" id="aboutText"></p>
+        <a href="#contact" class="btn btn-outline">Learn More About Me <span>👤</span></a>
+      </div>
+      <div class="stats" id="stats"></div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <p class="eyebrow center">MY SKILLS</p>
+      <h2 class="center underline">Technologies I Master</h2>
+      <div class="skill-grid" id="skillGrid"></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <p class="eyebrow center">FEATURED PROJECTS</p>
+      <h2 class="center underline">Some of My Recent Work</h2>
+      <div class="cards" id="cards"></div>
+      <div class="pager" id="pager"></div>
+    </div>
+  </section>
+
+  <section id="blog" class="blog-anchor"></section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container contact-grid">
+      <div>
+        <p class="eyebrow">LET'S WORK TOGETHER</p>
+        <h3 id="ctaTitle"></h3>
+        <p class="muted small" id="ctaText"></p>
+        <a id="mailBtn" href="#" class="btn btn-primary btn-sm">Get In Touch <span class="arrow">↗</span></a>
+      </div>
+
+      <div class="testimonial">
+        <span class="quote">“</span>
+        <p id="tQuote"></p>
+        <div class="person">
+          <div class="editable avatar" data-key="testimonialAvatar"><img id="avatarImg" alt="Avatar" /></div>
+          <div><strong id="tAuthor"></strong><br /><small class="muted" id="tRole"></small></div>
+        </div>
+      </div>
+
+      <div>
+        <p class="eyebrow">FOLLOW ME</p>
+        <div class="socials" id="socials"></div>
+        <p class="contact-line">✉ <span id="emailTxt"></span></p>
+        <p class="contact-line">✆ <span id="phoneTxt"></span></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> <span id="footName"></span> Developer. All rights reserved.</span>
+    <span>Made with <span class="heart">♥</span> by <span id="footName2"></span></span>
+  </div>
+</footer>
+
+<!-- Image editor -->
+<button class="edit-fab" id="editToggle">✎ Edit images</button>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-box">
+    <h4>Change image</h4>
+    <p class="muted small">Upload a file from your device or paste an image URL.</p>
+    <input type="file" id="fileInput" accept="image/*" />
+    <div class="or">or</div>
+    <input type="url" id="urlInput" placeholder="https://example.com/photo.jpg" />
+    <div class="btn-row">
+      <button class="btn btn-primary btn-sm" id="applyUrl">Use URL</button>
+      <button class="btn btn-outline btn-sm" id="resetImg">Reset to default</button>
+      <button class="btn btn-outline btn-sm" id="closeModal">Close</button>
+    </div>
+    <p class="muted tiny">Edits are saved in this browser. To make them permanent for everyone, put the file in <code>assets/</code> and set its path in <code>config.js</code>.</p>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
